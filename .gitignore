@@ -1,13 +1,17 @@
 
-
-# Ignore virtual environments and large binaries
+# Ignore virtual environments
 venv/
 env/
 */venv/
 */env/
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyd
 *.dll
 *.so
 *.lib
+
+# Other large folders
+ml_model/yolovenv/

@@ -8,7 +8,10 @@ export default defineConfig({
   },
   preview: {
     host: true,
-    port: 4173,
-    allowedHosts: ['elderly-fall-detection-project-1.onrender.com'],
+    port: process.env.PORT || 4173, // 👈 allows Render to assign dynamic ports
+    allowedHosts: ['.onrender.com'], // 👈 use wildcard to cover subdomains
+  },
+  build: {
+    outDir: 'dist', // 👈 make sure it's building to `dist`
   },
 });
